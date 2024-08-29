@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }}Vive les pommes!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Homepage</h1>
+    <nav>
+      <a href='{{ path("homepage") }}'>Accueil</a>
+      <a href='{{ path("article") }}'>article 1</a>
+    </nav>
+</div>
+{% endblock %}

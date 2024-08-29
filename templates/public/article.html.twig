@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }}Vive les pommes!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>article {{ idarticle }}</h1>
+    <nav>
+      <a href='{{ path("homepage") }}'>Accueil</a>
+      {% if idarticle > 1 %}
+        <a href='{{ path("article", {"id": idarticle - 1}) }}'>previous article ({{ idarticle - 1 }})</a>
+      {% endif %}
+      <a href='{{ path("article", {"id": idarticle + 1}) }}'>next article ({{ idarticle + 1 }})</a>
+    </nav>
+</div>
+{% endblock %}
